@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vendas.DAL;
 
 namespace Sistema_de_vendas_Cursos
 {
@@ -19,7 +20,7 @@ namespace Sistema_de_vendas_Cursos
 
         private void Form_venda_Load(object sender, EventArgs e)
         {
-
+            this.PessoaSource.DataSource = DataContextFactory.ContextData.tb_pessoas;
         }
     }
 }

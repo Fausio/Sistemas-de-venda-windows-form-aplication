@@ -49,7 +49,7 @@ namespace Sistema_de_vendas_Cursos
 
         private void VendasToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            form_vendas form = new form_vendas();
+            form_venda form = new form_venda();
             form.Show();
         }
     }
