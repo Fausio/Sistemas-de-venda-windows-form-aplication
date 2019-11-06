@@ -16,5 +16,10 @@ namespace Sistema_de_vendas_Cursos
         {
             InitializeComponent();
         }
+
+        private void Form_venda_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
