@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sistema de vendas Cursos", "Sistema de vendas Cursos.csproj", "{9C7D9C44-2260-4E89-9295-CE2BEAC1DA23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vendas.DAL", "Vendas.DAL\Vendas.DAL.csproj", "{DA608C94-542D-4A43-B067-9F78C30D736C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C7D9C44-2260-4E89-9295-CE2BEAC1DA23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C7D9C44-2260-4E89-9295-CE2BEAC1DA23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C7D9C44-2260-4E89-9295-CE2BEAC1DA23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C7D9C44-2260-4E89-9295-CE2BEAC1DA23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA608C94-542D-4A43-B067-9F78C30D736C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA608C94-542D-4A43-B067-9F78C30D736C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA608C94-542D-4A43-B067-9F78C30D736C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA608C94-542D-4A43-B067-9F78C30D736C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {23B1AEDC-3810-40F9-88DF-85DC1A637400}
+	EndGlobalSection
+EndGlobal
