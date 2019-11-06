@@ -48,16 +48,18 @@
             this.tbprodutoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ProdutosSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PessoaSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItensVendaSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProdutosSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(184, 19);
+            this.label1.Location = new System.Drawing.Point(218, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 0;
@@ -71,6 +73,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Nova venda";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // groupBox1
             // 
@@ -89,6 +92,7 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nova Venda";
+            this.groupBox1.Visible = false;
             // 
             // textBox1
             // 
@@ -99,6 +103,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.PessoaSource, "id_pessoa", true));
             this.comboBox1.DataSource = this.PessoaSource;
             this.comboBox1.DisplayMember = "desc_pessoa";
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -147,9 +152,10 @@
             // 
             // textBox2
             // 
+            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ItensVendaSource, "valor", true));
             this.textBox2.Location = new System.Drawing.Point(655, 35);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 20);
+            this.textBox2.Size = new System.Drawing.Size(115, 20);
             this.textBox2.TabIndex = 8;
             // 
             // textBox3
@@ -161,11 +167,15 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ProdutosSource, "id_produto", true));
+            this.comboBox2.DataSource = this.ProdutosSource;
+            this.comboBox2.DisplayMember = "desc_produto";
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(280, 34);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 4;
+            this.comboBox2.ValueMember = "id_produto";
             // 
             // PessoaSource
             // 
@@ -187,7 +197,7 @@
             this.dataGridView1.DataSource = this.ItensVendaSource;
             this.dataGridView1.Location = new System.Drawing.Point(9, 61);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(743, 250);
+            this.dataGridView1.Size = new System.Drawing.Size(761, 250);
             this.dataGridView1.TabIndex = 10;
             // 
             // quantidadeDataGridViewTextBoxColumn
@@ -214,6 +224,10 @@
             this.Column1.HeaderText = "Valor total";
             this.Column1.Name = "Column1";
             // 
+            // ProdutosSource
+            // 
+            this.ProdutosSource.DataSource = typeof(Vendas.DAL.tb_produto);
+            // 
             // form_venda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,6 +245,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PessoaSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItensVendaSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProdutosSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -257,5 +272,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tbprodutoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn valorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.BindingSource ProdutosSource;
     }
 }
